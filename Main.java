@@ -19,6 +19,7 @@ public class Main {
             } else {
                 System.out.println("Такая команда отсутствует");
             }
+            System.out.println("Пробная строка для возврата");
         }
     }
 
