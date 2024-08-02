@@ -4,7 +4,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            printMenu();
 
             int i = scanner.nextInt();
             if (i == 1) {
@@ -19,15 +18,6 @@ public class Main {
             } else {
                 System.out.println("Такая команда отсутствует");
             }
-            System.out.println("Пробная строка для возврата");
         }
-    }
-
-    public static void printMenu() {
-        System.out.println("Что Вы хотите сделать?");
-        System.out.println("1 - Ввести количество шагов за определенный день");
-        System.out.println("2 - Изменить цель по количеству шагов в день");
-        System.out.println("3 - Напечатать статистику за определнный месяц");
-        System.out.println("4 - Выйти из приложения");
     }
 }
