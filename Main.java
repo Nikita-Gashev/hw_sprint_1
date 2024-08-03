@@ -12,7 +12,7 @@ public class Main {
             if (i == 1) {
                 stepTracker.addNewNumberStepsPerDay();
             } else if (i == 2) {
-                System.out.println("Выполняется действие 2");
+                stepTracker.changeStepGoal();
             } else if (i == 3) {
                 System.out.println("Выполняется действие 3");
             } else if (i == 4) {
