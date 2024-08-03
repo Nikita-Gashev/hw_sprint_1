@@ -1,6 +1,6 @@
 public class Converter {
     int convertToKm(int steps) {
-        steps = steps * 75 / 100;
+        steps = steps * 75 / 100000;
         return steps;
     }
 

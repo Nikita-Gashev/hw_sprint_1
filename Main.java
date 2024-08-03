@@ -14,7 +14,7 @@ public class Main {
             } else if (i == 2) {
                 stepTracker.changeStepGoal();
             } else if (i == 3) {
-                System.out.println("Выполняется действие 3");
+                stepTracker.printStatistic();
             } else if (i == 4) {
                 System.out.println("До встречи!");
                 return;
