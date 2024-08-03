@@ -19,7 +19,7 @@ public class Main {
                 System.out.println("До встречи!");
                 return;
             } else {
-                System.out.println("Такая команда отсутствует");
+                System.out.println("Такая команда отсутствует!");
             }
         }
     }
