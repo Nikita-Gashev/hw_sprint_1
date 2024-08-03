@@ -25,7 +25,7 @@ public class StepTracker {
                 int numberSteps = scanner.nextInt();
                 if (numberSteps > 0) {
                     MonthData monthData = monthToData[monthNumber-1];
-                    monthData.days[daysNumber] = numberSteps;
+                    monthData.days[daysNumber-1] = numberSteps;
                 } else {
                     System.out.println("Введено некорректное значение шагов");
                     return;
@@ -55,7 +55,6 @@ public class StepTracker {
         int monthNumber = scanner.nextInt();
         if ((monthNumber >= 1) & (monthNumber <= 12)) {
             MonthData monthData = monthToData[monthNumber-1];
-            int sumSteps = monthData.sumStepsFromMonth();
             System.out.println("Общая статистика по дням:");
             monthData.printDaysAndStepsFromMonth();
             System.out.println("Общее количество шагов за месяц: " + monthData.sumStepsFromMonth());
