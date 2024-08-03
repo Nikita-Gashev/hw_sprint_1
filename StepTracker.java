@@ -28,15 +28,13 @@ public class StepTracker {
                     monthData.days[daysNumber-1] = numberSteps;
                 } else {
                     System.out.println("Введено некорректное значение шагов");
-                    return;
                 }
             } else {
                 System.out.println("Введен некорректный день");
-                return;
             }
         } else {
             System.out.println("Введен некорректный номер месяца");
-            return;
+
         }
     }
     void changeStepGoal() {
@@ -46,7 +44,6 @@ public class StepTracker {
             System.out.println("Ваша новая цель: " + goalByStepsPerDay + " шагов.");
         } else {
             System.out.println("Введено некорректное значение");
-            return;
         }
     }
 
@@ -66,7 +63,6 @@ public class StepTracker {
             System.out.println();
         } else {
             System.out.println("Введен некорректный номер месяца");
-            return;
         }
     }
 }
