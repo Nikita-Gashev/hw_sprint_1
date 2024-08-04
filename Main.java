@@ -9,17 +9,21 @@ public class Main {
             printMenu();
 
             int i = scanner.nextInt();
-            if (i == 1) {
-                stepTracker.addNewNumberStepsPerDay();
-            } else if (i == 2) {
-                stepTracker.changeStepGoal();
-            } else if (i == 3) {
-                stepTracker.printStatistic();
-            } else if (i == 4) {
-                System.out.println("До встречи!");
-                return;
-            } else {
-                System.out.println("Такая команда отсутствует");
+            switch (i) {
+                case 1:
+                    stepTracker.addNewNumberStepsPerDay();
+                    break;
+                case 2:
+                    stepTracker.changeStepGoal();
+                    break;
+                case 3:
+                    stepTracker.printStatistic();
+                    break;
+                case 4:
+                    System.out.println("До встречи!");
+                    return;
+                default:
+                    System.out.println("Такая команда отсутствует");
             }
         }
     }
