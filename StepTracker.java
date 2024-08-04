@@ -2,15 +2,15 @@ import java.util.Scanner;
 
 public class StepTracker {
     Scanner scanner;
-    MonthData[] monthToData = new MonthData[12];
+    MonthData[] monthToDataArray = new MonthData[12];
     int goalByStepsPerDay = 10000;
     Converter converter = new Converter();
 
     StepTracker(Scanner scan) {
         scanner = scan;
 
-        for (int i = 0; i < monthToData.length; i++) {
-            monthToData[i] = new MonthData();
+        for (int i = 0; i < monthToDataArray.length; i++) {
+            monthToDataArray[i] = new MonthData();
         }
     }
 
@@ -24,7 +24,7 @@ public class StepTracker {
                 System.out.println("Введите количество шагов");
                 int numberSteps = scanner.nextInt();
                 if (numberSteps > 0) {
-                    MonthData monthData = monthToData[monthNumber - 1];
+                    MonthData monthData = monthToDataArray[monthNumber - 1];
                     monthData.days[daysNumber - 1] = numberSteps;
                 } else {
                     System.out.println("Введено некорректное значение шагов");
@@ -34,7 +34,6 @@ public class StepTracker {
             }
         } else {
             System.out.println("Введен некорректный номер месяца");
-
         }
     }
 
@@ -52,7 +51,7 @@ public class StepTracker {
         System.out.println("Введите номер месяца");
         int monthNumber = scanner.nextInt();
         if ((monthNumber >= 1) & (monthNumber <= 12)) {
-            MonthData monthData = monthToData[monthNumber - 1];
+            MonthData monthData = monthToDataArray[monthNumber - 1];
             int sumSteps = monthData.sumStepsFromMonth();
 
             System.out.println("Общая статистика по дням:");
